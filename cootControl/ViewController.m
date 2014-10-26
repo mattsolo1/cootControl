@@ -27,6 +27,8 @@
     [self.oscServer setPort:RECIEVEPORT];
     //[self.oscServer setDelegate:self];
     [self.oscServer startListening];
+    // git test change
+    // lalalala
     
     // * define a view for the xy pad... an area to control with touch
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
