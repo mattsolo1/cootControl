@@ -45,7 +45,7 @@ def handler_rotate_xy(addr, tags, args, source):
     elif addr=="/RotateView/y":
         #ypos = (args[0]*screen_height)*rotate_sensitivity+(screen_height/6) - 100
         #print args[0]
-        ypos = (args[0]*screen_height+50)
+        ypos = (args[0]*screen_height+40)
     m.move(xpos, ypos)
     print xpos, ypos
 
@@ -77,14 +77,17 @@ def handler_translate_xy_activate(addr, tags, args, source):
     global ypos
     if addr=="/TranslateView/z":
         if args[0] == 1.0:
-            time.sleep(0.01)
+            #time.sleep(0.01)
+            k.press_key('control')
             currentx, currenty = m.position()
             m.press(currentx, currenty, 1)
-            k.press_key('control')
+            
         elif args[0] == 0.0:
             currentx, currenty = m.position()
             m.release(currentx, currenty, 1) 
             k.release_key('control')
+
+            
 
 def handler_mouse_click(addr, tags, args, source):
     global xpos
@@ -105,7 +108,7 @@ def handler_zoom_activate(addr, tags, args, source):
     global ypos
     if addr=="/Zoom/z":
         if args[0] == 1.0:
-            time.sleep(0.15)
+            #time.sleep(0.15)
             currentx, currenty = m.position()
             m.press(currentx, currenty, 2)
         elif args[0] == 0.0:

@@ -30,6 +30,9 @@
 		C99E4C0719FC67DC008956D8 /* NSNumber+F53OSCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF619FC67DC008956D8 /* NSNumber+F53OSCNumber.m */; };
 		C99E4C0819FC67DC008956D8 /* NSString+F53OSCString.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF819FC67DC008956D8 /* NSString+F53OSCString.m */; };
 		C99E4C0919FC67DC008956D8 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF919FC67DC008956D8 /* README.markdown */; };
+		C9AD86A519FCB61500695B1B /* pinch_area.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AD86A419FCB61500695B1B /* pinch_area.png */; };
+		C9AD86A819FCB99200695B1B /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AD86A619FCB99200695B1B /* ball.png */; };
+		C9AD86A919FCB99200695B1B /* pinch_area2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AD86A719FCB99200695B1B /* pinch_area2.png */; };
 		C9B69D4C19EB451600431EDE /* XYPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B69D4B19EB451600431EDE /* XYPad.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,9 @@
 		C99E4BF719FC67DC008956D8 /* NSString+F53OSCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+F53OSCString.h"; path = "MetanoneOSC/NSString+F53OSCString.h"; sourceTree = "<group>"; };
 		C99E4BF819FC67DC008956D8 /* NSString+F53OSCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+F53OSCString.m"; path = "MetanoneOSC/NSString+F53OSCString.m"; sourceTree = "<group>"; };
 		C99E4BF919FC67DC008956D8 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.markdown; path = MetanoneOSC/README.markdown; sourceTree = "<group>"; };
+		C9AD86A419FCB61500695B1B /* pinch_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinch_area.png; sourceTree = "<group>"; };
+		C9AD86A619FCB99200695B1B /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		C9AD86A719FCB99200695B1B /* pinch_area2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinch_area2.png; sourceTree = "<group>"; };
 		C9B69D4B19EB451600431EDE /* XYPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPad.m; sourceTree = "<group>"; };
 		C9B69D4D19EB452700431EDE /* XYPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPad.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +157,9 @@
 		C99D3C0819E8B59A007E07F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9AD86A619FCB99200695B1B /* ball.png */,
+				C9AD86A719FCB99200695B1B /* pinch_area2.png */,
+				C9AD86A419FCB61500695B1B /* pinch_area.png */,
 				C99D3C0919E8B59A007E07F7 /* Info.plist */,
 				C99D3C0A19E8B59A007E07F7 /* main.m */,
 			);
@@ -297,7 +306,10 @@
 			files = (
 				C99E4C0419FC67DC008956D8 /* LICENSE.txt in Resources */,
 				C99D3C1419E8B59A007E07F7 /* Main.storyboard in Resources */,
+				C9AD86A819FCB99200695B1B /* ball.png in Resources */,
 				C99D3C1919E8B59A007E07F7 /* LaunchScreen.xib in Resources */,
+				C9AD86A519FCB61500695B1B /* pinch_area.png in Resources */,
+				C9AD86A919FCB99200695B1B /* pinch_area2.png in Resources */,
 				C99D3C1619E8B59A007E07F7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

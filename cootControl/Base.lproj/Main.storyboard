@@ -49,13 +49,6 @@
                                     <action selector="zoomDeactivate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5je-zF-3iI"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coot Control 0.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wd-tm-VMI">
-                                <rect key="frame" x="427" y="39" width="211" height="52"/>
-                                <color key="backgroundColor" red="0.17254902422428131" green="0.21960785984992981" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-dj-UhY">
                                 <rect key="frame" x="144" y="388" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -373,7 +366,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOX-Y5-hjq">
-                                <rect key="frame" x="742" y="500" width="123" height="54"/>
+                                <rect key="frame" x="735" y="496" width="123" height="54"/>
                                 <color key="backgroundColor" red="0.55614078519999999" green="0.70398143739999997" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.19991960589999999" blue="0.23396313369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Trim Sidechain">
@@ -451,6 +444,24 @@
                                 <color key="textColor" red="0.36862745879999997" green="0.42352944609999998" blue="0.57254904510000004" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="highlightedColor" red="0.50740179809999997" green="1" blue="0.3248560734" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinch_area2.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-wr-icf" userLabel="xyPad">
+                                <rect key="frame" x="332" y="99" width="327" height="256"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oSh-1M-xqe" appends="YES" id="Lw4-Fk-jCI"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="Biv-fg-gUR">
+                                <rect key="frame" x="719" y="200" width="54" height="54"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coot Control 0.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wd-tm-VMI">
+                                <rect key="frame" x="390" y="39" width="211" height="52"/>
+                                <color key="backgroundColor" red="0.17254902422428131" green="0.21960785984992981" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -459,8 +470,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oSh-1M-xqe">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="nVH-bp-zv3"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-38" y="-65"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball.png" width="151" height="151"/>
+        <image name="pinch_area2.png" width="910" height="878"/>
+    </resources>
 </document>
