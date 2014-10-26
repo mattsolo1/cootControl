@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C99D3C0B19E8B59A007E07F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C0A19E8B59A007E07F7 /* main.m */; };
+		C99D3C0E19E8B59A007E07F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C0D19E8B59A007E07F7 /* AppDelegate.m */; };
+		C99D3C1119E8B59A007E07F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C1019E8B59A007E07F7 /* ViewController.m */; };
+		C99D3C1419E8B59A007E07F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99D3C1219E8B59A007E07F7 /* Main.storyboard */; };
+		C99D3C1619E8B59A007E07F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99D3C1519E8B59A007E07F7 /* Images.xcassets */; };
+		C99D3C1919E8B59A007E07F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99D3C1719E8B59A007E07F7 /* LaunchScreen.xib */; };
+		C99D3C2519E8B59A007E07F7 /* cootControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C2419E8B59A007E07F7 /* cootControlTests.m */; };
+		C99E4BFA19FC67DC008956D8 /* F53OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BDB19FC67DC008956D8 /* F53OSCBundle.m */; };
+		C99E4BFB19FC67DC008956D8 /* F53OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BDD19FC67DC008956D8 /* F53OSCClient.m */; };
+		C99E4BFC19FC67DC008956D8 /* F53OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BE019FC67DC008956D8 /* F53OSCMessage.m */; };
+		C99E4BFD19FC67DC008956D8 /* F53OSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BE219FC67DC008956D8 /* F53OSCPacket.m */; };
+		C99E4BFE19FC67DC008956D8 /* F53OSCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BE419FC67DC008956D8 /* F53OSCParser.m */; };
+		C99E4BFF19FC67DC008956D8 /* F53OSCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BE719FC67DC008956D8 /* F53OSCServer.m */; };
+		C99E4C0019FC67DC008956D8 /* F53OSCSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BE919FC67DC008956D8 /* F53OSCSocket.m */; };
+		C99E4C0119FC67DC008956D8 /* F53OSCTimeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BEB19FC67DC008956D8 /* F53OSCTimeTag.m */; };
+		C99E4C0219FC67DC008956D8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BED19FC67DC008956D8 /* GCDAsyncSocket.m */; };
+		C99E4C0319FC67DC008956D8 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BEF19FC67DC008956D8 /* GCDAsyncUdpSocket.m */; };
+		C99E4C0419FC67DC008956D8 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C99E4BF019FC67DC008956D8 /* LICENSE.txt */; };
+		C99E4C0519FC67DC008956D8 /* NSData+F53OSCBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF219FC67DC008956D8 /* NSData+F53OSCBlob.m */; };
+		C99E4C0619FC67DC008956D8 /* NSDate+F53OSCTimeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF419FC67DC008956D8 /* NSDate+F53OSCTimeTag.m */; };
+		C99E4C0719FC67DC008956D8 /* NSNumber+F53OSCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF619FC67DC008956D8 /* NSNumber+F53OSCNumber.m */; };
+		C99E4C0819FC67DC008956D8 /* NSString+F53OSCString.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF819FC67DC008956D8 /* NSString+F53OSCString.m */; };
+		C99E4C0919FC67DC008956D8 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = C99E4BF919FC67DC008956D8 /* README.markdown */; };
+		C9B69D4C19EB451600431EDE /* XYPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B69D4B19EB451600431EDE /* XYPad.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C99D3C1F19E8B59A007E07F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99D3BFD19E8B59A007E07F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C99D3C0419E8B59A007E07F7;
+			remoteInfo = cootControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C99D3C0519E8B59A007E07F7 /* cootControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cootControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99D3C0919E8B59A007E07F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99D3C0A19E8B59A007E07F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C99D3C0C19E8B59A007E07F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C99D3C0D19E8B59A007E07F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C99D3C0F19E8B59A007E07F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C99D3C1019E8B59A007E07F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C99D3C1319E8B59A007E07F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C99D3C1519E8B59A007E07F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C99D3C1819E8B59A007E07F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C99D3C1E19E8B59A007E07F7 /* cootControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cootControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99D3C2319E8B59A007E07F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99D3C2419E8B59A007E07F7 /* cootControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cootControlTests.m; sourceTree = "<group>"; };
+		C99E4BD919FC67DC008956D8 /* F53OSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSC.h; path = MetanoneOSC/F53OSC.h; sourceTree = "<group>"; };
+		C99E4BDA19FC67DC008956D8 /* F53OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCBundle.h; path = MetanoneOSC/F53OSCBundle.h; sourceTree = "<group>"; };
+		C99E4BDB19FC67DC008956D8 /* F53OSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCBundle.m; path = MetanoneOSC/F53OSCBundle.m; sourceTree = "<group>"; };
+		C99E4BDC19FC67DC008956D8 /* F53OSCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCClient.h; path = MetanoneOSC/F53OSCClient.h; sourceTree = "<group>"; };
+		C99E4BDD19FC67DC008956D8 /* F53OSCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCClient.m; path = MetanoneOSC/F53OSCClient.m; sourceTree = "<group>"; };
+		C99E4BDE19FC67DC008956D8 /* F53OSCFoundationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCFoundationAdditions.h; path = MetanoneOSC/F53OSCFoundationAdditions.h; sourceTree = "<group>"; };
+		C99E4BDF19FC67DC008956D8 /* F53OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCMessage.h; path = MetanoneOSC/F53OSCMessage.h; sourceTree = "<group>"; };
+		C99E4BE019FC67DC008956D8 /* F53OSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCMessage.m; path = MetanoneOSC/F53OSCMessage.m; sourceTree = "<group>"; };
+		C99E4BE119FC67DC008956D8 /* F53OSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCPacket.h; path = MetanoneOSC/F53OSCPacket.h; sourceTree = "<group>"; };
+		C99E4BE219FC67DC008956D8 /* F53OSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCPacket.m; path = MetanoneOSC/F53OSCPacket.m; sourceTree = "<group>"; };
+		C99E4BE319FC67DC008956D8 /* F53OSCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCParser.h; path = MetanoneOSC/F53OSCParser.h; sourceTree = "<group>"; };
+		C99E4BE419FC67DC008956D8 /* F53OSCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCParser.m; path = MetanoneOSC/F53OSCParser.m; sourceTree = "<group>"; };
+		C99E4BE519FC67DC008956D8 /* F53OSCProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCProtocols.h; path = MetanoneOSC/F53OSCProtocols.h; sourceTree = "<group>"; };
+		C99E4BE619FC67DC008956D8 /* F53OSCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCServer.h; path = MetanoneOSC/F53OSCServer.h; sourceTree = "<group>"; };
+		C99E4BE719FC67DC008956D8 /* F53OSCServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCServer.m; path = MetanoneOSC/F53OSCServer.m; sourceTree = "<group>"; };
+		C99E4BE819FC67DC008956D8 /* F53OSCSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCSocket.h; path = MetanoneOSC/F53OSCSocket.h; sourceTree = "<group>"; };
+		C99E4BE919FC67DC008956D8 /* F53OSCSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCSocket.m; path = MetanoneOSC/F53OSCSocket.m; sourceTree = "<group>"; };
+		C99E4BEA19FC67DC008956D8 /* F53OSCTimeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F53OSCTimeTag.h; path = MetanoneOSC/F53OSCTimeTag.h; sourceTree = "<group>"; };
+		C99E4BEB19FC67DC008956D8 /* F53OSCTimeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F53OSCTimeTag.m; path = MetanoneOSC/F53OSCTimeTag.m; sourceTree = "<group>"; };
+		C99E4BEC19FC67DC008956D8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = MetanoneOSC/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C99E4BED19FC67DC008956D8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = MetanoneOSC/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C99E4BEE19FC67DC008956D8 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = MetanoneOSC/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		C99E4BEF19FC67DC008956D8 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = MetanoneOSC/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		C99E4BF019FC67DC008956D8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = MetanoneOSC/LICENSE.txt; sourceTree = "<group>"; };
+		C99E4BF119FC67DC008956D8 /* NSData+F53OSCBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+F53OSCBlob.h"; path = "MetanoneOSC/NSData+F53OSCBlob.h"; sourceTree = "<group>"; };
+		C99E4BF219FC67DC008956D8 /* NSData+F53OSCBlob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+F53OSCBlob.m"; path = "MetanoneOSC/NSData+F53OSCBlob.m"; sourceTree = "<group>"; };
+		C99E4BF319FC67DC008956D8 /* NSDate+F53OSCTimeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+F53OSCTimeTag.h"; path = "MetanoneOSC/NSDate+F53OSCTimeTag.h"; sourceTree = "<group>"; };
+		C99E4BF419FC67DC008956D8 /* NSDate+F53OSCTimeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+F53OSCTimeTag.m"; path = "MetanoneOSC/NSDate+F53OSCTimeTag.m"; sourceTree = "<group>"; };
+		C99E4BF519FC67DC008956D8 /* NSNumber+F53OSCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+F53OSCNumber.h"; path = "MetanoneOSC/NSNumber+F53OSCNumber.h"; sourceTree = "<group>"; };
+		C99E4BF619FC67DC008956D8 /* NSNumber+F53OSCNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+F53OSCNumber.m"; path = "MetanoneOSC/NSNumber+F53OSCNumber.m"; sourceTree = "<group>"; };
+		C99E4BF719FC67DC008956D8 /* NSString+F53OSCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+F53OSCString.h"; path = "MetanoneOSC/NSString+F53OSCString.h"; sourceTree = "<group>"; };
+		C99E4BF819FC67DC008956D8 /* NSString+F53OSCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+F53OSCString.m"; path = "MetanoneOSC/NSString+F53OSCString.m"; sourceTree = "<group>"; };
+		C99E4BF919FC67DC008956D8 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.markdown; path = MetanoneOSC/README.markdown; sourceTree = "<group>"; };
+		C9B69D4B19EB451600431EDE /* XYPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPad.m; sourceTree = "<group>"; };
+		C9B69D4D19EB452700431EDE /* XYPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPad.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C99D3C0219E8B59A007E07F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99D3C1B19E8B59A007E07F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C99D3BFC19E8B59A007E07F7 = {
+			isa = PBXGroup;
+			children = (
+				C99D3C2F19E8BCED007E07F7 /* MetanoneOSC */,
+				C99D3C0719E8B59A007E07F7 /* cootControl */,
+				C99D3C2119E8B59A007E07F7 /* cootControlTests */,
+				C99D3C0619E8B59A007E07F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C99D3C0619E8B59A007E07F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99D3C0519E8B59A007E07F7 /* cootControl.app */,
+				C99D3C1E19E8B59A007E07F7 /* cootControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C99D3C0719E8B59A007E07F7 /* cootControl */ = {
+			isa = PBXGroup;
+			children = (
+				C99D3C0C19E8B59A007E07F7 /* AppDelegate.h */,
+				C99D3C0D19E8B59A007E07F7 /* AppDelegate.m */,
+				C99D3C0F19E8B59A007E07F7 /* ViewController.h */,
+				C99D3C1019E8B59A007E07F7 /* ViewController.m */,
+				C9B69D4D19EB452700431EDE /* XYPad.h */,
+				C9B69D4B19EB451600431EDE /* XYPad.m */,
+				C99D3C1219E8B59A007E07F7 /* Main.storyboard */,
+				C99D3C1519E8B59A007E07F7 /* Images.xcassets */,
+				C99D3C1719E8B59A007E07F7 /* LaunchScreen.xib */,
+				C99D3C0819E8B59A007E07F7 /* Supporting Files */,
+			);
+			path = cootControl;
+			sourceTree = "<group>";
+		};
+		C99D3C0819E8B59A007E07F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C99D3C0919E8B59A007E07F7 /* Info.plist */,
+				C99D3C0A19E8B59A007E07F7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C99D3C2119E8B59A007E07F7 /* cootControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				C99D3C2419E8B59A007E07F7 /* cootControlTests.m */,
+				C99D3C2219E8B59A007E07F7 /* Supporting Files */,
+			);
+			path = cootControlTests;
+			sourceTree = "<group>";
+		};
+		C99D3C2219E8B59A007E07F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C99D3C2319E8B59A007E07F7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C99D3C2F19E8BCED007E07F7 /* MetanoneOSC */ = {
+			isa = PBXGroup;
+			children = (
+				C99E4BD919FC67DC008956D8 /* F53OSC.h */,
+				C99E4BDA19FC67DC008956D8 /* F53OSCBundle.h */,
+				C99E4BDB19FC67DC008956D8 /* F53OSCBundle.m */,
+				C99E4BDC19FC67DC008956D8 /* F53OSCClient.h */,
+				C99E4BDD19FC67DC008956D8 /* F53OSCClient.m */,
+				C99E4BDE19FC67DC008956D8 /* F53OSCFoundationAdditions.h */,
+				C99E4BDF19FC67DC008956D8 /* F53OSCMessage.h */,
+				C99E4BE019FC67DC008956D8 /* F53OSCMessage.m */,
+				C99E4BE119FC67DC008956D8 /* F53OSCPacket.h */,
+				C99E4BE219FC67DC008956D8 /* F53OSCPacket.m */,
+				C99E4BE319FC67DC008956D8 /* F53OSCParser.h */,
+				C99E4BE419FC67DC008956D8 /* F53OSCParser.m */,
+				C99E4BE519FC67DC008956D8 /* F53OSCProtocols.h */,
+				C99E4BE619FC67DC008956D8 /* F53OSCServer.h */,
+				C99E4BE719FC67DC008956D8 /* F53OSCServer.m */,
+				C99E4BE819FC67DC008956D8 /* F53OSCSocket.h */,
+				C99E4BE919FC67DC008956D8 /* F53OSCSocket.m */,
+				C99E4BEA19FC67DC008956D8 /* F53OSCTimeTag.h */,
+				C99E4BEB19FC67DC008956D8 /* F53OSCTimeTag.m */,
+				C99E4BEC19FC67DC008956D8 /* GCDAsyncSocket.h */,
+				C99E4BED19FC67DC008956D8 /* GCDAsyncSocket.m */,
+				C99E4BEE19FC67DC008956D8 /* GCDAsyncUdpSocket.h */,
+				C99E4BEF19FC67DC008956D8 /* GCDAsyncUdpSocket.m */,
+				C99E4BF019FC67DC008956D8 /* LICENSE.txt */,
+				C99E4BF119FC67DC008956D8 /* NSData+F53OSCBlob.h */,
+				C99E4BF219FC67DC008956D8 /* NSData+F53OSCBlob.m */,
+				C99E4BF319FC67DC008956D8 /* NSDate+F53OSCTimeTag.h */,
+				C99E4BF419FC67DC008956D8 /* NSDate+F53OSCTimeTag.m */,
+				C99E4BF519FC67DC008956D8 /* NSNumber+F53OSCNumber.h */,
+				C99E4BF619FC67DC008956D8 /* NSNumber+F53OSCNumber.m */,
+				C99E4BF719FC67DC008956D8 /* NSString+F53OSCString.h */,
+				C99E4BF819FC67DC008956D8 /* NSString+F53OSCString.m */,
+				C99E4BF919FC67DC008956D8 /* README.markdown */,
+			);
+			name = MetanoneOSC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C99D3C0419E8B59A007E07F7 /* cootControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99D3C2819E8B59A007E07F7 /* Build configuration list for PBXNativeTarget "cootControl" */;
+			buildPhases = (
+				C99D3C0119E8B59A007E07F7 /* Sources */,
+				C99D3C0219E8B59A007E07F7 /* Frameworks */,
+				C99D3C0319E8B59A007E07F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cootControl;
+			productName = cootControl;
+			productReference = C99D3C0519E8B59A007E07F7 /* cootControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C99D3C1D19E8B59A007E07F7 /* cootControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99D3C2B19E8B59A007E07F7 /* Build configuration list for PBXNativeTarget "cootControlTests" */;
+			buildPhases = (
+				C99D3C1A19E8B59A007E07F7 /* Sources */,
+				C99D3C1B19E8B59A007E07F7 /* Frameworks */,
+				C99D3C1C19E8B59A007E07F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C99D3C2019E8B59A007E07F7 /* PBXTargetDependency */,
+			);
+			name = cootControlTests;
+			productName = cootControlTests;
+			productReference = C99D3C1E19E8B59A007E07F7 /* cootControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C99D3BFD19E8B59A007E07F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Matt;
+				TargetAttributes = {
+					C99D3C0419E8B59A007E07F7 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = EAD68KN7RP;
+					};
+					C99D3C1D19E8B59A007E07F7 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = C99D3C0419E8B59A007E07F7;
+					};
+				};
+			};
+			buildConfigurationList = C99D3C0019E8B59A007E07F7 /* Build configuration list for PBXProject "cootControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C99D3BFC19E8B59A007E07F7;
+			productRefGroup = C99D3C0619E8B59A007E07F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C99D3C0419E8B59A007E07F7 /* cootControl */,
+				C99D3C1D19E8B59A007E07F7 /* cootControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C99D3C0319E8B59A007E07F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99E4C0419FC67DC008956D8 /* LICENSE.txt in Resources */,
+				C99D3C1419E8B59A007E07F7 /* Main.storyboard in Resources */,
+				C99D3C1919E8B59A007E07F7 /* LaunchScreen.xib in Resources */,
+				C99D3C1619E8B59A007E07F7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99D3C1C19E8B59A007E07F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C99D3C0119E8B59A007E07F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99E4C0919FC67DC008956D8 /* README.markdown in Sources */,
+				C99E4C0119FC67DC008956D8 /* F53OSCTimeTag.m in Sources */,
+				C99E4C0819FC67DC008956D8 /* NSString+F53OSCString.m in Sources */,
+				C99E4C0219FC67DC008956D8 /* GCDAsyncSocket.m in Sources */,
+				C99D3C1119E8B59A007E07F7 /* ViewController.m in Sources */,
+				C99E4C0519FC67DC008956D8 /* NSData+F53OSCBlob.m in Sources */,
+				C99E4BFF19FC67DC008956D8 /* F53OSCServer.m in Sources */,
+				C99E4C0319FC67DC008956D8 /* GCDAsyncUdpSocket.m in Sources */,
+				C99D3C0E19E8B59A007E07F7 /* AppDelegate.m in Sources */,
+				C99E4BFC19FC67DC008956D8 /* F53OSCMessage.m in Sources */,
+				C9B69D4C19EB451600431EDE /* XYPad.m in Sources */,
+				C99E4C0619FC67DC008956D8 /* NSDate+F53OSCTimeTag.m in Sources */,
+				C99E4BFD19FC67DC008956D8 /* F53OSCPacket.m in Sources */,
+				C99E4C0019FC67DC008956D8 /* F53OSCSocket.m in Sources */,
+				C99E4BFB19FC67DC008956D8 /* F53OSCClient.m in Sources */,
+				C99D3C0B19E8B59A007E07F7 /* main.m in Sources */,
+				C99E4BFE19FC67DC008956D8 /* F53OSCParser.m in Sources */,
+				C99E4BFA19FC67DC008956D8 /* F53OSCBundle.m in Sources */,
+				C99E4C0719FC67DC008956D8 /* NSNumber+F53OSCNumber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99D3C1A19E8B59A007E07F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99D3C2519E8B59A007E07F7 /* cootControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C99D3C2019E8B59A007E07F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C99D3C0419E8B59A007E07F7 /* cootControl */;
+			targetProxy = C99D3C1F19E8B59A007E07F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C99D3C1219E8B59A007E07F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99D3C1319E8B59A007E07F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C99D3C1719E8B59A007E07F7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99D3C1819E8B59A007E07F7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C99D3C2619E8B59A007E07F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C99D3C2719E8B59A007E07F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C99D3C2919E8B59A007E07F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = cootControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C99D3C2A19E8B59A007E07F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = cootControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C99D3C2C19E8B59A007E07F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cootControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cootControl.app/cootControl";
+			};
+			name = Debug;
+		};
+		C99D3C2D19E8B59A007E07F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cootControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cootControl.app/cootControl";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C99D3C0019E8B59A007E07F7 /* Build configuration list for PBXProject "cootControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99D3C2619E8B59A007E07F7 /* Debug */,
+				C99D3C2719E8B59A007E07F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99D3C2819E8B59A007E07F7 /* Build configuration list for PBXNativeTarget "cootControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99D3C2919E8B59A007E07F7 /* Debug */,
+				C99D3C2A19E8B59A007E07F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99D3C2B19E8B59A007E07F7 /* Build configuration list for PBXNativeTarget "cootControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99D3C2C19E8B59A007E07F7 /* Debug */,
+				C99D3C2D19E8B59A007E07F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C99D3BFD19E8B59A007E07F7 /* Project object */;
+}
