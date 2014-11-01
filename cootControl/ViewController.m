@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#define SENDHOST @"192.168.1.71"
+#define SENDHOST @"192.168.1.65"
 #define SENDPORT 10000
 #define RECIEVEPORT 3001
 
@@ -17,6 +17,9 @@
 @end
 
 @implementation ViewController
+
+
+
 
 - (void)viewDidLoad {
     
@@ -32,26 +35,27 @@
     // another change from temp
     // cocococooco
     
-    // * define a view for the xy pad... an area to control with touch
+    // * xy pad for rotate view
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     xyRotateView = [defaults objectForKey:@"xyRotateView"];
     xyRotateView = [[UIView alloc] init];
     xyRotateView.frame = self.view.frame;
-    xyRotateView.backgroundColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:0.2];
-    xyRotateView.layer.borderColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:1.0].CGColor;
-    xyRotateView.layer.borderWidth = 1.0f;
+    
+    //xyRotateView.backgroundColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:0.2];
+    //xyRotateView.layer.borderColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:1.0].CGColor;
+    //xyRotateView.layer.borderWidth = 1.0f;
     [self.view addSubview:xyRotateView];
-    [xyRotateView setFrame:CGRectMake(10, 30, 320, 320)];
+    [xyRotateView setFrame:CGRectMake(10, 30, 280, 280)];
     
     // * xy pad for translate view
     xyTranslateView = [defaults objectForKey:@"xyTranslateView"];
     xyTranslateView = [[UIView alloc] init];
     xyTranslateView.frame = self.view.frame;
-    xyTranslateView.backgroundColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:0.2];
-    xyTranslateView.layer.borderColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:1.0].CGColor;
-    xyTranslateView.layer.borderWidth = 1.0f;
+    //xyTranslateView.backgroundColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:0.2];
+    //xyTranslateView.layer.borderColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:1.0].CGColor;
+    //xyTranslateView.layer.borderWidth = 1.0f;
     [self.view addSubview:xyTranslateView];
-    [xyTranslateView setFrame:CGRectMake(690, 30, 320, 320)];
+    [xyTranslateView setFrame:CGRectMake(725, 30, 280, 280)];
     
     
     // * make a vertical slider - doesn't work
@@ -61,6 +65,88 @@
 
 }
 
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+    
+    CGPoint touch = [recognizer locationInView:self.view];
+    
+    NSNumber *xpos = [NSNumber numberWithFloat:((touch.x - recognizer.view.frame.origin.x) / recognizer.view.frame.size.width)];
+    NSNumber *ypos = [NSNumber numberWithFloat:((touch.y - recognizer.view.frame.origin.y) / recognizer.view.frame.size.height)];
+    
+    if (CGRectContainsPoint(recognizer.view.frame, touch)) {
+        
+        NSLog(@"one touch x: %@, pan y: %@", xpos, ypos);
+        
+        F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/RotateView/x" arguments:@[xpos]];
+        
+        F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/RotateView/y" arguments:@[ypos]];
+        
+        F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/RotateView/z" arguments:@[@1.0]];
+        
+        [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
+        [self.oscClient sendPacket:messageY toHost:SENDHOST onPort:SENDPORT];
+        [self.oscClient sendPacket:messageZ toHost:SENDHOST onPort:SENDPORT];
+    }
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        
+        F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/RotateView/z" arguments:@[@0.0]];
+        [self.oscClient sendPacket:messageZ toHost:SENDHOST onPort:SENDPORT];
+        }
+    
+/*
+    if (recognizer.numberOfTouches == 2) {
+        
+        CGPoint touch = [recognizer locationInView:self.view];
+        
+        NSNumber *xpos = [NSNumber numberWithFloat:((touch.x - recognizer.view.frame.origin.x) / recognizer.view.frame.size.width)];
+        NSNumber *ypos = [NSNumber numberWithFloat:((touch.y - recognizer.view.frame.origin.y) / recognizer.view.frame.size.height)];
+        
+        if (CGRectContainsPoint(recognizer.view.frame, touch)) {
+            
+            NSLog(@"two touch: %@, pan y: %@", xpos, ypos);
+            
+            F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/x" arguments:@[xpos]];
+            F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/y" arguments:@[ypos]];
+            F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/z" arguments:@[@1.0]];
+            
+            [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
+            [self.oscClient sendPacket:messageY toHost:SENDHOST onPort:SENDPORT];
+            [self.oscClient sendPacket:messageZ toHost:SENDHOST onPort:SENDPORT];
+        }
+        
+        if (recognizer.state == UIGestureRecognizerStateEnded) {
+            F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/x" arguments:@[xpos]];
+            F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/y" arguments:@[ypos]];
+            F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/z" arguments:@[@0.0]];
+            
+            [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
+            [self.oscClient sendPacket:messageY toHost:SENDHOST onPort:SENDPORT];
+            [self.oscClient sendPacket:messageZ toHost:SENDHOST onPort:SENDPORT];
+        }
+        
+    }
+ */
+}
+
+
+- (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer {
+    
+    CGPoint touch = [recognizer locationInView:self.view];
+    
+    if (CGRectContainsPoint(recognizer.view.frame, touch)) {
+    
+        NSLog(@"pinch: %f", recognizer.scale);
+    
+        recognizer.scale = 1;
+    }
+}
+
+- (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer {
+    
+    NSLog(@"pinch: %f", recognizer.rotation);
+    
+    recognizer.rotation = 0;
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -71,7 +157,6 @@
     if (CGRectContainsPoint(xyRotateView.frame, currentPoint)) {
     
         
-
         F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/RotateView/x" arguments:@[[NSNumber numberWithFloat:(currentPoint.x/ xyRotateView.frame.size.width)]]];
         
         F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/RotateView/y" arguments:@[[NSNumber numberWithFloat:(currentPoint.y/xyRotateView.frame.size.height)]]];
@@ -88,10 +173,11 @@
         
         NSLog(@"touchbegin current translate point is %f and %f", currentPoint.x, currentPoint.y);
         
+
         F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/x" arguments:@[[NSNumber numberWithFloat:((currentPoint.x - 650)/xyTranslateView.frame.size.width)]]];
         
         F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/y" arguments:@[[NSNumber numberWithFloat:(currentPoint.y/xyTranslateView.frame.size.height)]]];
-        
+
         F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/z" arguments:@[@1.0]];
         
         [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
@@ -119,14 +205,14 @@
     } else if (CGRectContainsPoint(xyTranslateView.frame, currentPoint)) {
         
         NSLog(@"touchmoved current translate point is %f and %f", currentPoint.x, currentPoint.y);
-        
+
         F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/x" arguments:@[[NSNumber numberWithFloat:((currentPoint.x - 650)/xyTranslateView.frame.size.width)]]];
         
         F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/y" arguments:@[[NSNumber numberWithFloat:(currentPoint.y/xyTranslateView.frame.size.height)]]];
         
         [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
         [self.oscClient sendPacket:messageY toHost:SENDHOST onPort:SENDPORT];
-        
+
     }
 }
 
@@ -150,11 +236,9 @@
     }  else if (CGRectContainsPoint(xyTranslateView.frame, currentPoint)) {
         
         NSLog(@"touchesended current translate point is %f and %f", currentPoint.x, currentPoint.y);
-        
+
         F53OSCMessage *messageX = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/x" arguments:@[[NSNumber numberWithFloat:((currentPoint.x - 650)/xyTranslateView.frame.size.width)]]];
-        
         F53OSCMessage *messageY = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/y" arguments:@[[NSNumber numberWithFloat:(currentPoint.y/xyTranslateView.frame.size.height)]]];
-        
         F53OSCMessage *messageZ = [F53OSCMessage messageWithAddressPattern:@"/TranslateView/z" arguments:@[@0.0]];
         
         [self.oscClient sendPacket:messageX toHost:SENDHOST onPort:SENDPORT];
@@ -163,6 +247,7 @@
         
     }
 }
+
 
 
 - (IBAction)sendZoomMessage:(UISlider *)sender {

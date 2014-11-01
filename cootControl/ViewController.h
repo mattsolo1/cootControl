@@ -18,6 +18,7 @@
     UIView *xyRotateView;
     UIView *xyTranslateView;
     UISlider *zoomSlider;
+    UIImageView *xyPad;
     
 }
 
@@ -27,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *argumentsLabel;
 @property (weak, nonatomic) IBOutlet UIView *xyRotateView;
 
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
+- (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer;
 
 // -(void)takeMessage:(F53OSCMessage *)message;
 
