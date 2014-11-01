@@ -10,7 +10,7 @@ from pykeyboard import PyKeyboard
 m = PyMouse()
 k = PyKeyboard()
 
-receive_address = '192.168.1.71', 10000  #for home wiress connection Mattbook
+receive_address = '192.168.1.65', 10000  #for home wiress connection Mattbook
 #receive_address = '206.87.218.197', 10000  #for work wiress connection Mattbook
 #receive_address = '169.254.25.196', 10000  #for ad hoc wireless MattBook
 #receive_address = '169.254.245.198', 10000  #for ad hoc wireless piglet

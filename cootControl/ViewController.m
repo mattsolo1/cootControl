@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#define SENDHOST @"192.168.1.71"
+#define SENDHOST @"192.168.1.65"
 #define SENDPORT 10000
 #define RECIEVEPORT 3001
 
@@ -40,21 +40,22 @@
     xyRotateView = [defaults objectForKey:@"xyRotateView"];
     xyRotateView = [[UIView alloc] init];
     xyRotateView.frame = self.view.frame;
-    xyRotateView.backgroundColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:0.2];
-    xyRotateView.layer.borderColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:1.0].CGColor;
-    xyRotateView.layer.borderWidth = 1.0f;
+    
+    //xyRotateView.backgroundColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:0.2];
+    //xyRotateView.layer.borderColor = [UIColor colorWithRed:0.462 green:0.794 blue:0.937 alpha:1.0].CGColor;
+    //xyRotateView.layer.borderWidth = 1.0f;
     [self.view addSubview:xyRotateView];
-    [xyRotateView setFrame:CGRectMake(10, 30, 320, 320)];
+    [xyRotateView setFrame:CGRectMake(10, 30, 280, 280)];
     
     // * xy pad for translate view
     xyTranslateView = [defaults objectForKey:@"xyTranslateView"];
     xyTranslateView = [[UIView alloc] init];
     xyTranslateView.frame = self.view.frame;
-    xyTranslateView.backgroundColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:0.2];
-    xyTranslateView.layer.borderColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:1.0].CGColor;
-    xyTranslateView.layer.borderWidth = 1.0f;
+    //xyTranslateView.backgroundColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:0.2];
+    //xyTranslateView.layer.borderColor = [UIColor colorWithRed:0.158 green:0.224 blue:0.760 alpha:1.0].CGColor;
+    //xyTranslateView.layer.borderWidth = 1.0f;
     [self.view addSubview:xyTranslateView];
-    [xyTranslateView setFrame:CGRectMake(690, 30, 320, 320)];
+    [xyTranslateView setFrame:CGRectMake(725, 30, 280, 280)];
     
     
     // * make a vertical slider - doesn't work
