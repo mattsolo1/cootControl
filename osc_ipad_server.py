@@ -20,6 +20,14 @@ s = OSC.OSCServer(receive_address)
 s.addDefaultHandlers()
 
 
+ipad_address = '192.168.1.64', 3001
+c = OSC.OSCClient()
+c.connect(ipad_address)
+
+
+
+
+
 rotate_sensitivity = 0.8
 screen_width = 1200
 screen_height = 700 #boundary for full-screen coot
@@ -166,8 +174,15 @@ def handler_AddWater(addr, tags, args, source):
 def handler_NextResidue(addr, tags, args, source):
     if addr=="/NextResidue/x":
         if args[0] == 1.0:
-            print args[0]
+            #print args[0]
             k.tap_key('space')
+            k.press_key('shift')
+            k.tap_key('w')
+            k.release_key('shift')
+            msg = OSC.OSCMessage('/currentResidue')
+            msg.append("test")
+            msg.append(current_residue)
+            c.send(msg)
 
 def handler_PreviousResidue(addr, tags, args, source):
     if addr=="/PreviousResidue/x":
@@ -371,13 +386,21 @@ s.addMsgHandler("/TryAnother/x", handler_TryAnother)
 s.addMsgHandler("/BatonLengthen/x", handler_BatonLengthen)
 s.addMsgHandler("/BatonShorten/x", handler_BatonShorten)
 
+
+# send current residue info to ipad
+
+
+
 st = threading.Thread( target = s.serve_forever )
 st.start()
 
 
 try :
     while 1 :
-        time.sleep(5)
+        time.sleep(0.05)
+        f = open("output_active_atom.txt", "r")
+        current_residue = f.readline()
+        f.close()
 
 except KeyboardInterrupt :
     print "\nClosing OSCServer."

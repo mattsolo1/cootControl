@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "F53OSC.h"
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <F53OSCPacketDestination> {
     
     CGPoint lastPoint;
     CGPoint moveBackTo;
@@ -22,15 +22,14 @@
     
 }
 
-@property (strong, nonatomic) F53OSCClient* oscClient;
-@property (strong, nonatomic) F53OSCServer* oscServer;
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *argumentsLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *xyRotateView;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 - (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 - (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer;
+- (void)takeMessage:(F53OSCMessage *)message;
+
 
 // -(void)takeMessage:(F53OSCMessage *)message;
 

@@ -14,6 +14,11 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) F53OSCClient* oscClient;
+@property (strong, nonatomic) F53OSCServer* oscServer;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *argumentsLabel;
+
 @end
 
 @implementation ViewController
@@ -28,12 +33,9 @@
     self.oscClient = [[F53OSCClient alloc] init];
     self.oscServer = [[F53OSCServer alloc] init];
     [self.oscServer setPort:RECIEVEPORT];
-    //[self.oscServer setDelegate:self];
+    [self.oscServer setDelegate:self];
     [self.oscServer startListening];
-    // git test change
-    // lalalala
-    // another change from temp
-    // cocococooco
+
     
     // * xy pad for rotate view
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -396,12 +398,16 @@
     [self.oscClient sendPacket:message toHost:SENDHOST onPort:SENDPORT];
 }
 
-/*
+
 -(void)takeMessage:(F53OSCMessage *)message {
+    NSArray *args = message.arguments;
+    //NSLog (@"Number of msgs sent = %lu", [args count]);
+    //NSLog (@"%@", [args objectAtIndex:1]);
     [self.addressLabel setText:message.addressPattern];
-    [self.argumentsLabel setText:[message.arguments description]];
+    [self.argumentsLabel setText:[args objectAtIndex:1]];
+
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
