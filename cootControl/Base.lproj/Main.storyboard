@@ -17,9 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-Yr-aWH">
+                                <rect key="frame" x="0.0" y="-2" width="1024" height="770"/>
+                            </imageView>
                             <slider opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="308" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-7s-iMa" userLabel="zoomSlider">
                                 <rect key="frame" x="8" y="330" width="312" height="31"/>
-                                <color key="tintColor" red="0.52828165880417177" green="0.60000002384185791" blue="0.31066825608021537" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.95686274509803926" green="0.69411764705882351" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sendZoomMessage:" destination="BYZ-38-t0r" eventType="valueChanged" id="ppl-s6-OC7"/>
                                     <action selector="zoomActivate:" destination="BYZ-38-t0r" eventType="touchDown" id="7LT-Ib-xTp"/>
@@ -30,12 +33,6 @@
                                 <rect key="frame" x="142" y="358" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.50740179809999997" green="1" blue="0.3248560734" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XY rotate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xV-LS-O7K">
-                                <rect key="frame" x="111" y="5" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.36862745881080627" green="0.42352944612503052" blue="0.57254904508590698" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="highlightedColor" red="0.50740179809999997" green="1" blue="0.3248560734" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-Ms-V6w">
@@ -83,9 +80,6 @@
                                     <action selector="AutofitRotamer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9n-eh-6Lt"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-KB-nPF">
-                                <rect key="frame" x="355" y="112" width="312" height="31"/>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-Kg-R7f">
                                 <rect key="frame" x="357" y="133" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -106,7 +100,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dZz-4b-Efu">
                                 <rect key="frame" x="355" y="213" width="312" height="31"/>
-                                <color key="tintColor" red="0.1174484943516626" green="1" blue="0.02670690189285041" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.40784313725490196" green="0.84313725490196079" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fW-yc-R0a">
                                 <rect key="frame" x="357" y="234" width="75" height="21"/>
@@ -128,11 +122,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY1-WY-gzB">
                                 <rect key="frame" x="384" y="166" width="123" height="26"/>
-                                <color key="backgroundColor" red="0.39491791589657965" green="0.53362865871735554" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.19991960589999999" blue="0.23396313369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Set Scroll">
                                     <color key="titleColor" red="0.21653530691115197" green="0.70882880370045598" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.051444687550000978" green="0.26169602829762428" blue="0.65190529336734693" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Set2FoFcScroll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwD-vq-jao"/>
@@ -140,11 +134,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqP-Iw-FA7">
                                 <rect key="frame" x="515" y="166" width="123" height="26"/>
-                                <color key="backgroundColor" red="0.39491791589657965" green="0.53362865871735554" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.19991960589999999" blue="0.23396313369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Set Refine">
                                     <color key="titleColor" red="0.21653530691115197" green="0.70882880370045598" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.051444687550000978" green="0.26169602829762428" blue="0.65190529336734693" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Set2FoFcRefine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkf-es-aCG"/>
@@ -152,10 +146,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWO-Hw-UPL">
                                 <rect key="frame" x="384" y="266" width="123" height="26"/>
-                                <color key="backgroundColor" red="0.40205641514594914" green="1" blue="0.27020892051547485" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.19991960589999999" blue="0.23396313369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Set Scroll">
-                                    <color key="titleColor" red="0.17651368892338293" green="1" blue="0.25200458579083451" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.40784313725490196" green="0.84313725490196079" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.05144468755" green="0.26169602829999999" blue="0.65190529340000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -164,10 +158,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-vX-74O">
                                 <rect key="frame" x="515" y="266" width="123" height="26"/>
-                                <color key="backgroundColor" red="0.40205641514594914" green="1" blue="0.27020892051547485" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.19991960589999999" blue="0.23396313369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Set Refine">
-                                    <color key="titleColor" red="0.17651368892338293" green="1" blue="0.25200458579083451" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.40784313725490196" green="0.84313725490196079" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.05144468755" green="0.26169602829999999" blue="0.65190529340000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -199,12 +193,6 @@
                                     <action selector="ToggleHydrogens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePp-gl-JAZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XY translate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41r-gt-Ejs">
-                                <rect key="frame" x="769" y="5" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.36862745879999997" green="0.42352944609999998" blue="0.57254904510000004" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="highlightedColor" red="0.50740179809999997" green="1" blue="0.3248560734" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xyRotate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-mE-Okg">
                                 <rect key="frame" x="10" y="30" width="280" height="280"/>
                             </imageView>
@@ -456,8 +444,21 @@
                                     <action selector="setUndo:" destination="BYZ-38-t0r" eventType="touchDown" id="Ldp-Si-9l5"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-KB-nPF">
+                                <rect key="frame" x="355" y="112" width="312" height="31"/>
+                                <color key="tintColor" red="0.23921568627450981" green="0.73333333333333328" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="epP-DC-H6w">
+                                <rect key="frame" x="355" y="330" width="312" height="31"/>
+                                <color key="tintColor" red="0.96862745098039216" green="0.69803921568627447" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Radius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5un-pz-lcl">
+                                <rect key="frame" x="459" y="358" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.50740179809999997" green="1" blue="0.3248560734" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.34901960784313724" green="0.41960784313725491" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -483,6 +484,7 @@
         <image name="addWater_on.png" width="511" height="511"/>
         <image name="autoRefine_off.png" width="511" height="511"/>
         <image name="autoRefine_on.png" width="511" height="511"/>
+        <image name="background.png" width="8533" height="6400"/>
         <image name="deleteWater_off.png" width="511" height="511"/>
         <image name="deleteWater_on.png" width="511" height="511"/>
         <image name="flipBond_off.png" width="511" height="511"/>
@@ -516,7 +518,7 @@
         <image name="tripleRefine_on.png" width="511" height="511"/>
         <image name="undo_off.png" width="511" height="511"/>
         <image name="undo_on.png" width="511" height="511"/>
-        <image name="xyRotate.png" width="1906" height="1690"/>
-        <image name="xyTranslate.png" width="1906" height="1690"/>
+        <image name="xyRotate.png" width="1907" height="1691"/>
+        <image name="xyTranslate.png" width="1907" height="1691"/>
     </resources>
 </document>
