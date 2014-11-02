@@ -29,6 +29,7 @@
 		C90B0DA41A05674000DCCE29 /* previousChain_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B0D8E1A05674000DCCE29 /* previousChain_off.png */; };
 		C90B0DA51A05674000DCCE29 /* xyTranslate.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B0D8F1A05674000DCCE29 /* xyTranslate.png */; };
 		C90B0DA61A05674000DCCE29 /* xyRotate.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B0D901A05674000DCCE29 /* xyRotate.png */; };
+		C94F20A91A068F2600EBFBB6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C94F20A81A068F2600EBFBB6 /* background.png */; };
 		C99D3C0B19E8B59A007E07F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C0A19E8B59A007E07F7 /* main.m */; };
 		C99D3C0E19E8B59A007E07F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C0D19E8B59A007E07F7 /* AppDelegate.m */; };
 		C99D3C1119E8B59A007E07F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D3C1019E8B59A007E07F7 /* ViewController.m */; };
@@ -113,6 +114,7 @@
 		C90B0D8E1A05674000DCCE29 /* previousChain_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previousChain_off.png; sourceTree = "<group>"; };
 		C90B0D8F1A05674000DCCE29 /* xyTranslate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xyTranslate.png; sourceTree = "<group>"; };
 		C90B0D901A05674000DCCE29 /* xyRotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xyRotate.png; sourceTree = "<group>"; };
+		C94F20A81A068F2600EBFBB6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C99D3C0519E8B59A007E07F7 /* cootControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cootControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99D3C0919E8B59A007E07F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99D3C0A19E8B59A007E07F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		C90B0D581A0555DD00DCCE29 /* UIGraphics */ = {
 			isa = PBXGroup;
 			children = (
+				C94F20A81A068F2600EBFBB6 /* background.png */,
 				C9F8D51A1A05773D00972987 /* undo_on.png */,
 				C9F8D51B1A05773D00972987 /* redo_on.png */,
 				C9F8D51C1A05773D00972987 /* accept_on.png */,
@@ -485,6 +488,7 @@
 				C9F8D5361A05773D00972987 /* addWater_on.png in Resources */,
 				C9F8D5381A05773D00972987 /* flipBond_on.png in Resources */,
 				C9F8D5161A05759800972987 /* nextChain_on.png in Resources */,
+				C94F20A91A068F2600EBFBB6 /* background.png in Resources */,
 				C99D3C1619E8B59A007E07F7 /* Images.xcassets in Resources */,
 				C9F8D5371A05773D00972987 /* deleteWater_on.png in Resources */,
 				C90B0D9F1A05674000DCCE29 /* toggleGhosts_off.png in Resources */,
