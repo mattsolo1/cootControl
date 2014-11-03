@@ -20,7 +20,7 @@ s = OSC.OSCServer(receive_address)
 s.addDefaultHandlers()
 
 
-ipad_address = '192.168.1.64', 3001
+ipad_address = '192.168.1.64', 8001
 c = OSC.OSCClient()
 c.connect(ipad_address)
 
@@ -179,9 +179,9 @@ def handler_NextResidue(addr, tags, args, source):
             k.press_key('shift')
             k.tap_key('w')
             k.release_key('shift')
+            time.sleep(0.1)
             msg = OSC.OSCMessage('/currentResidue')
-            msg.append("test")
-            msg.append(current_residue)
+            msg.extend([molecule_name, current_residue, chain_name, residue_number, residue_name])
             c.send(msg)
 
 def handler_PreviousResidue(addr, tags, args, source):
@@ -397,9 +397,13 @@ st.start()
 
 try :
     while 1 :
-        time.sleep(0.05)
+        time.sleep(0.01)
         f = open("output_active_atom.txt", "r")
+        molecule_name = f.readline()
         current_residue = f.readline()
+        chain_name = f.readline()
+        residue_number = f.readline()
+        residue_name = f.readline()
         f.close()
 
 except KeyboardInterrupt :

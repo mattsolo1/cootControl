@@ -10,14 +10,18 @@
 
 #define SENDHOST @"192.168.1.65"
 #define SENDPORT 10000
-#define RECIEVEPORT 3001
+#define RECIEVEPORT 8001
 
 @interface ViewController ()
 
 @property (strong, nonatomic) F53OSCClient* oscClient;
 @property (strong, nonatomic) F53OSCServer* oscServer;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *argumentsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recieveMoleculeName;
+@property (weak, nonatomic) IBOutlet UILabel *recieveMoleculeNumber;
+@property (weak, nonatomic) IBOutlet UILabel *recieveChainName;
+@property (weak, nonatomic) IBOutlet UILabel *recieveResidueNumber;
+@property (weak, nonatomic) IBOutlet UILabel *recieveResidueName;
 
 @end
 
@@ -404,10 +408,12 @@
     //NSLog (@"Number of msgs sent = %lu", [args count]);
     //NSLog (@"%@", [args objectAtIndex:1]);
     [self.addressLabel setText:message.addressPattern];
-    [self.argumentsLabel setText:[args objectAtIndex:1]];
-
+    [self.recieveMoleculeName setText:[args objectAtIndex:0]];
+    [self.recieveMoleculeNumber setText:[args objectAtIndex:1]];
+    [self.recieveChainName setText:[args objectAtIndex:2]];
+    [self.recieveResidueNumber setText:[args objectAtIndex:3]];
+    [self.recieveResidueName setText:[args objectAtIndex:4]];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
