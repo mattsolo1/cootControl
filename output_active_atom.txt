@@ -1,5 +1,5 @@
 pdb4ike.ent
 0
 A
-5
-PHE
+107
+VAL

@@ -1,0 +1,47 @@
+!
+.menu                     T          21         40
+colour_text green                       
+Centre_ID                               
+colour_text yellow                      
+!-----------
+colour_text red                         
+@map_sym                                
+colour_text yellow                      
+!-----------
+colour_text magenta                     
+@reset_view                             
+@all_obj_off
+colour_text yellow                      
+!-----------
+colour_text cyan                     
+@auto_map_sym
+@man_map_sym
+colour_text yellow                      
+!-----------
+colour_text cyan                     
+@big_sym_sph
+@small_sym_sph
+!
+@reset_view               T          6         40
+read original_view.gs
+vis_obj * off
+vis_obj rsr on
+vis_obj hetero on                          
+vis_obj cpk_hetero on
+vis_obj s_hetero on
+!
+@all_obj_off              T          1         40
+vis_obj * off                           
+!
+@auto_map_sym             T          1         40
+$ echo "@map_sym" > on_centre
+!
+@man_map_sym              T          1         40
+$ echo "bell" > on_centre
+!
+@big_sym_sph              T          1         40
+symbol symrad 20
+!
+@small_sym_sph            T          1         40
+symbol symrad 10
+!

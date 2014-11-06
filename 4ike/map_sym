@@ -1,0 +1,7 @@
+fm_draw 4ike
+fm_draw d4ike
+mol 4ike
+pa_case atom_z 5 6 7 8 15 16 green cyan magenta white yellow
+symm_sph ;; $symrad
+pa_case atom_z 5 6 7 8 15 16 yellow blue red orange green
+bell

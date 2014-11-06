@@ -1,0 +1,57 @@
+! O macro for reading in and drawing coords of PDB entry 4ike 
+! 
+! created by run_eds.csh at Sat Jul  5 04:21:27 CEST 2014
+! 
+! read and draw model, incl. any alt. confs
+pdb_read pdb4ike.ent 4ike ; ; no
+mol 4ike zone ; end
+mol 4ikeB zone ; end
+mol 4ike
+! draw sigmaa 2mFo-DFc map at two levels
+fm_file 4ike.omap 4ike ;
+fm_set 4ike 25.0 solid 2 1.0 blue 4.0 cyan
+cen_xyz 13.651 30.735 13.283
+win_ope density_1 -1.2 0.7
+! draw difference mFo-DFc map at two levels
+fm_file 4ike_diff.omap d4ike ;
+fm_set d4ike 25.0 solid 2 4.0 green -4.0 red
+win_ope density_2 -1.2 0.1
+! draw various CA objects
+read rsfit_4ike.odb
+@drawem
+! place menu windows and create user menu
+win_ope object_menu 0.9 0.7
+win_ope user_menu 0.9 -0.3
+! in O 9 or better, this will draw a HETERO object
+db_table kind i table_kind.dat
+sel_off ;; sel_prop residue_kind = 0 on
+sel_vis obj hetero zo ; end
+sel_on ;; sel_vis
+read radii.odb ske_stick hetero ske_cpk hetero
+! print some map statistics
+print ...
+print ... Unit cell SIGMAA 2mFo-DFc density parameters
+print ... Minimum -0.96095
+print ... Maximum 4.43866
+print ... Average -0.00000
+print ... Sigma 0.38523
+print ...
+print ...
+print ... Unit cell DIFFERENCE mFo-DFc density parameters
+print ... Minimum -0.46649
+print ... Maximum 0.44669
+print ... Average 0.00000
+print ... Sigma 0.07802
+print ...
+! symmetry stuff
+symbol symrad 10
+symm_set 4ike ; p21
+symm_cell
+! almost done
+db_kill @on_centre
+read eds_menu.odb
+@map_sym
+write .gs_real original_view.gs ;
+@reset_view
+clear_flags
+bell

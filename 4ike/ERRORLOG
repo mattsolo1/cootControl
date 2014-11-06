@@ -1,0 +1,12 @@
+REMARK FILPDB PDB file filtered for EDS by FILPDB 0.9 2004-10-05    
+REMARK FILPDB Nr of HETATM cards renamed to ATOM   :        612
+REMARK FILPDB Nr of "REMARK 290" cards stripped    :         24
+4ike_uni.log: Warning, NOT all LABOUT data lines given
+dataman.log: WARNING - fewer than 500 TEST reflections !
+f2mtz_4ike.log: $TEXT:Warning: $$ comment $$ 
+f2mtz_4ike.log: WARNING:  CRYSTALNAME not assigned
+f2mtz_4ike.log: WARNING:  DATASETNAME not assigned
+f2mtz_4ike.log: WARNING:  PROJECTNAME not assigned
+refmac_4ike.log:Cruickshanks DPI for coordinate error=     0.0885
+rsfit_4ike.log: Nr with computation errors   : (          0) 
+rsfit_4ike.log: Total nr with errors         : (          0) 

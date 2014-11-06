@@ -406,13 +406,14 @@
 -(void)takeMessage:(F53OSCMessage *)message {
     NSArray *args = message.arguments;
     //NSLog (@"Number of msgs sent = %lu", [args count]);
-    //NSLog (@"%@", [args objectAtIndex:1]);
+    NSLog (@"%@", [args objectAtIndex:1]);
     [self.addressLabel setText:message.addressPattern];
-    [self.recieveMoleculeName setText:[args objectAtIndex:0]];
-    [self.recieveMoleculeNumber setText:[args objectAtIndex:1]];
-    [self.recieveChainName setText:[args objectAtIndex:2]];
-    [self.recieveResidueNumber setText:[args objectAtIndex:3]];
-    [self.recieveResidueName setText:[args objectAtIndex:4]];
+    if ([args objectAtIndex:0] != nil)
+        [self.recieveMoleculeName setText:[args objectAtIndex:0]];
+        [self.recieveMoleculeNumber setText:[args objectAtIndex:1]];
+        [self.recieveChainName setText:[args objectAtIndex:2]];
+        [self.recieveResidueNumber setText:[args objectAtIndex:3]];
+        [self.recieveResidueName setText:[args objectAtIndex:4]];
 }
 
 - (void)didReceiveMemoryWarning {
